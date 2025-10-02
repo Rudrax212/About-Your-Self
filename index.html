@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudrax Gambhva</title>
+  <style>
+    * {
+      scroll-behavior: smooth;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #f0f4f8, #e3e9f0);
+      color: #333;
+      line-height: 1.6;
+      position: relative;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, #1e1e2f, #23234a);
+      color: #fff;
+      padding: 40px 20px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 5px;
+      background: linear-gradient(45deg, #ff9800, #ff4d4d);
+      -webkit-background-clip: text;
+      text-align: center;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+    header h2 {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: linear-gradient(100deg, #ff9800, #ff4d4d);
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(255,152,0,0.5);
+    }
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #1e1e2f;
+    }
+    /* Cards */
+    .card, .achievement-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover, .achievement-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(255,152,0,0.4);
+    }
+
+    .education, .experience, .achievements {
+      display: grid;
+      gap: 20px;
+    }
+
+    .achievements {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .skills ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      list-style: none;
+      text-align: center;
+    }
+
+    .skills ul li {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .skills ul li:hover {
+      background: linear-gradient(135deg, #ff9800, #ff4d4d);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact input, .contact textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .contact button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #ff9800, #ff4d4d);
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .contact button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255,77,77,0.5);
+    }
+
+    footer {
+      text-align: center;
+      background: #1e1e2f;
+      color: #fff;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Rudrax Gambhva</h1>
+    <h2>Diploma - Computer Engineering Student</h2>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate and curious Computer Engineering student currently pursuing my Diploma at Majura Gate, Surat.
+      I enjoy learning new programming concepts and exploring the practical side of computer science.
+      Outside academics, I’m an enthusiastic cricket player and love traveling to peaceful places surrounded by nature.
+      I believe in continuous growth, both personally and professionally, and I’m always eager to take on new challenges and learn from every experience.
+    </p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card">
+        <h3>2023 - 2026 | Computer Engineering - Diploma</h3>
+        <p>Dr. S. & S.S. Ghandhy College of Engineering & Technology</p>
+        <p>Learning programming languages like C, C++, Java, Python, HTML, CSS, JavaScript, database systems, and computer networks.</p>
+      </div>
+      <div class="card">
+        <h3>2021 - 2023 | High School (Std-9/10)</h3>
+        <p>Shree R.J.H. HighSchool, Dhasa Jn.</p>
+        <p>Focused on self-awareness, communication skills, digital literacy, and responsibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience">
+      <div class="card">
+        <h3>2024 | Internship - Code Square</h3>
+        <p>Completed a 2-week internship focused on front-end development using HTML & CSS.</p>
+        <p>Demonstrated strong technical and problem-solving skills with a self-motivated approach to learning.</p>
+      </div>
+      <div class="card">
+        <h3>2025 | Self Project - Travel App</h3>
+        <p>Developed a travel app using Flutter in Visual Studio.</p>
+        <p>Enhanced problem-solving skills, improved time management, and gained hands-on experience in app development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills & Projects</h2>
+    <ul>
+      <li>Teamwork</li>
+      <li>Collaboration</li>
+      <li>Communication</li>
+      <li>Innovation</li>
+      <li>C, C++</li>
+      <li>Python, Java</li>
+      <li>HTML, CSS</li>
+      <li>JavaScript</li>
+      <li>Flutter</li>
+      <li>Travel-App / Flutter</li>
+      <li>Rolex-Web / Website</li>
+    </ul>
+    <h3 style="text-align:center; margin-top:30px;">Sports</h3>
+    <p style="text-align:center;">Cricket | Volleyball</p>
+  </section>
+
+  <!-- Achievements Section -->
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="achievements">
+    <div class="achievement-card">
+      <h3>2023 - NCC A Certificate</h3>
+      <p>Achieved <strong>NCC A Group Certificate</strong> during Std. 9/10. This accomplishment helped me build discipline, leadership qualities, and teamwork skills.</p>
+    </div>
+    <div class="achievement-card">
+      <h3>2025 - Sports Certificates</h3>
+      <p>Earned certificates in <strong>Cricket</strong> and <strong>Volleyball</strong>. These achievements reflect my dedication towards sports, teamwork, and maintaining a balanced lifestyle alongside academics.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">
+      📞 +91 7984037679 | 
+      <a href="mailto:rudrakshgambhava21@gmail.com">rudrakshgambhava21@gmail.com</a> | 
+      <a href="https://www.linkedin.com/in/rudrax-gambhva-computer-ssgp-dte-a71823317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2007 Rudrax Gambhva |</p>
+  </footer>
+
+</body>
+</html>
